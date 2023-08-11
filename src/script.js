@@ -116,7 +116,7 @@ scene.add( mesh1, mesh2, mesh3);
 
     /* gltf:DONUT */
     const DONUTtextureloader=new THREE.TextureLoader()
-    const DONUTtexture = DONUTtextureloader.load('../public/donutUVbaking.png');
+    const DONUTtexture = DONUTtextureloader.load('donutUVbaking.png');
     DONUTtexture.flipY =false; 
     DONUTtexture.colorSpace=THREE.SRGBColorSpace;
 
@@ -124,7 +124,7 @@ scene.add( mesh1, mesh2, mesh3);
     
 
     const gltfloader2= new GLTFLoader();
-    gltfloader2.load('../public/donut for three.glb',
+    gltfloader2.load('donut for three.glb',
     ( gltf ) => {
 
         let model = gltf.scene;
@@ -149,7 +149,7 @@ scene.add( mesh1, mesh2, mesh3);
 
         /* gltf:JINJI */
         const JINJItextureloader=new THREE.TextureLoader()
-        const JINJItexture = JINJItextureloader.load('../public/candyUV.png');
+        const JINJItexture = JINJItextureloader.load('candyUV.png');
         JINJItexture.flipY =true; 
         JINJItexture.colorSpace=THREE.SRGBColorSpace;
     
@@ -157,7 +157,7 @@ scene.add( mesh1, mesh2, mesh3);
         
     
         const gltfloader3= new GLTFLoader();
-        gltfloader2.load('../public/jinji for three.glb',
+        gltfloader2.load('jinji for three.glb',
         ( gltf ) => {
     
             let model = gltf.scene;
