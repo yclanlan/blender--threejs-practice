@@ -33,6 +33,21 @@ const scene = new THREE.Scene()
 //fog
 // scene.fog = new THREE.FogExp2( 0x64B4FD, 0.05 );
 
+/**
+ * object
+ */
+
+
+const textureloader= new THREE.TextureLoader();
+const gradientTexture = textureloader.load('./static/textures/gradients/3.jpg');
+gradientTexture.magFilter = THREE.NearestFilter
+
+const material = new THREE.MeshToonMaterial({ 
+    color: parameters.materialColor,
+    gradientMap: gradientTexture
+    
+});
+
 
 
 // const gridHelper = new THREE.GridHelper( 10, 10 );
