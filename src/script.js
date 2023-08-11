@@ -33,20 +33,6 @@ const scene = new THREE.Scene()
 //fog
 // scene.fog = new THREE.FogExp2( 0x64B4FD, 0.05 );
 
-/**
- * object
- */
-
-
-const textureloader= new THREE.TextureLoader();
-const gradientTexture = textureloader.load('./static/textures/gradients/3.jpg');
-gradientTexture.magFilter = THREE.NearestFilter
-
-const material = new THREE.MeshToonMaterial({ 
-    color: parameters.materialColor,
-    gradientMap: gradientTexture
-});
-
 
 
 // const gridHelper = new THREE.GridHelper( 10, 10 );
@@ -88,7 +74,7 @@ scene.add( mesh1, mesh2, mesh3);
 
     /* gltf:BURGER */
     const BURtextureloader=new THREE.TextureLoader()
-    const BURTexture = BURtextureloader.load('./0810bakingwalpha.png');
+    const BURTexture = BURtextureloader.load('0810bakingwalpha.png');
     BURTexture.flipY =false;
     BURTexture.colorSpace=THREE.SRGBColorSpace;
     // BURTexture.transparent=true;
@@ -116,7 +102,7 @@ scene.add( mesh1, mesh2, mesh3);
 
     /* gltf:DONUT */
     const DONUTtextureloader=new THREE.TextureLoader()
-    const DONUTtexture = DONUTtextureloader.load('./donutUVbaking.png');
+    const DONUTtexture = DONUTtextureloader.load('donutUVbaking.png');
     DONUTtexture.flipY =false; 
     DONUTtexture.colorSpace=THREE.SRGBColorSpace;
 
@@ -149,7 +135,7 @@ scene.add( mesh1, mesh2, mesh3);
 
         /* gltf:JINJI */
         const JINJItextureloader=new THREE.TextureLoader()
-        const JINJItexture = JINJItextureloader.load('./candyUV.png');
+        const JINJItexture = JINJItextureloader.load('candyUV.png');
         JINJItexture.flipY =true; 
         JINJItexture.colorSpace=THREE.SRGBColorSpace;
     
