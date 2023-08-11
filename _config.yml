@@ -5,7 +5,8 @@
 title: Lan's blender Pratice
 description: "Practice combine textured blender models to online 3D website by three.js"
 
-url: lan.happy.blender# (optional) https://example.com, defaults to http://localhost:4000 in development
+# url: https://lan.happy.blender.com
+# (optional) https://example.com, defaults to http://localhost:4000 in development
 
 # permalink: date 
 # how your URLs are built, see https://jekyllrb.com/docs/permalinks/#builtinpermalinkstyles
