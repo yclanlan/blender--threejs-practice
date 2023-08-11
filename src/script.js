@@ -88,7 +88,7 @@ scene.add( mesh1, mesh2, mesh3);
 
     /* gltf:BURGER */
     const BURtextureloader=new THREE.TextureLoader()
-    const BURTexture = BURtextureloader.load('../public/0810bakingwalpha.png');
+    const BURTexture = BURtextureloader.load('0810bakingwalpha.png');
     BURTexture.flipY =false;
     BURTexture.colorSpace=THREE.SRGBColorSpace;
     // BURTexture.transparent=true;
@@ -98,7 +98,7 @@ scene.add( mesh1, mesh2, mesh3);
     BURMaterial.depthWrite=true;
     const gltfloader= new GLTFLoader();
 
-    gltfloader.load('../public/0810hamberger for three.glb',
+    gltfloader.load('0810hamberger for three.glb',
     ( gltf ) => {
 
     let model = gltf.scene;
