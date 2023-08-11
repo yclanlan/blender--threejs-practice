@@ -88,7 +88,7 @@ scene.add( mesh1, mesh2, mesh3);
 
     /* gltf:BURGER */
     const BURtextureloader=new THREE.TextureLoader()
-    const BURTexture = BURtextureloader.load('../src/public/0810bakingwalpha.png');
+    const BURTexture = BURtextureloader.load('lan-blender-threejs/src/public/0810bakingwalpha.png');
     BURTexture.flipY =false;
     BURTexture.colorSpace=THREE.SRGBColorSpace;
     // BURTexture.transparent=true;
@@ -98,7 +98,7 @@ scene.add( mesh1, mesh2, mesh3);
     BURMaterial.depthWrite=true;
     const gltfloader= new GLTFLoader();
 
-    gltfloader.load('../src/public/0810hamberger for three.glb',
+    gltfloader.load('lan-blender-threejs/src/public/0810hamberger for three.glb',
     ( gltf ) => {
 
     let model = gltf.scene;
@@ -116,7 +116,7 @@ scene.add( mesh1, mesh2, mesh3);
 
     /* gltf:DONUT */
     const DONUTtextureloader=new THREE.TextureLoader()
-    const DONUTtexture = DONUTtextureloader.load('../src/public/donutUVbaking.png');
+    const DONUTtexture = DONUTtextureloader.load('lan-blender-threejs/src/public/donutUVbaking.png');
     DONUTtexture.flipY =false; 
     DONUTtexture.colorSpace=THREE.SRGBColorSpace;
 
@@ -124,7 +124,7 @@ scene.add( mesh1, mesh2, mesh3);
     
 
     const gltfloader2= new GLTFLoader();
-    gltfloader2.load('../src/public/donut for three.glb',
+    gltfloader2.load('lan-blender-threejs/src/public/donut for three.glb',
     ( gltf ) => {
 
         let model = gltf.scene;
@@ -149,7 +149,7 @@ scene.add( mesh1, mesh2, mesh3);
 
         /* gltf:JINJI */
         const JINJItextureloader=new THREE.TextureLoader()
-        const JINJItexture = JINJItextureloader.load('../src/public/candyUV.png');
+        const JINJItexture = JINJItextureloader.load('lan-blender-threejs/src/public/candyUV.png');
         JINJItexture.flipY =true; 
         JINJItexture.colorSpace=THREE.SRGBColorSpace;
     
@@ -157,7 +157,7 @@ scene.add( mesh1, mesh2, mesh3);
         
     
         const gltfloader3= new GLTFLoader();
-        gltfloader2.load('../src/public/jinji for three.glb',
+        gltfloader2.load('lan-blender-threejs/src/public/jinji for three.glb',
         ( gltf ) => {
     
             let model = gltf.scene;
