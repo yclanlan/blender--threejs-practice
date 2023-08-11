@@ -1,0 +1,84 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+html{
+    
+    background: #012758;
+    background-image: linear-gradient(180deg, #012758 20%,#1271d5,#012758);
+
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+
+}
+
+
+.section
+{
+    display: flex-block;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    height: 105vh;
+    position: relative;
+    font-family: 'Cabin', sans-serif;
+    color: #ffffff;
+    font-size: 7vmin;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+
+section:nth-child(2)
+{
+    justify-content: flex;
+    text-align: left;
+    
+}
+
+section:nth-child(3)
+{
+    text-align: right;
+    
+}
+
+section:nth-child(4)
+{
+    text-align: center;
+    
+}
+
+h1{
+    font-size: 8vmin;
+}
+
+h3{
+    font-size: 4vmin;
+    font-weight: 400;
+}
+
+h5{
+    font-size: 2vmin;
+    font-weight: 350;
+}
+
+p{
+    font-size: 1.3vmin;
+    font-weight: 300;
+    line-height: 2vmin;
+}
+
+a{
+    font-size: 1.3vmin;
+    color:white;
+}
