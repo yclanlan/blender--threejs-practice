@@ -39,7 +39,7 @@ const scene = new THREE.Scene()
 
 
 const textureloader= new THREE.TextureLoader();
-const gradientTexture = textureloader.load('./public/textures/gradients/3.jpg');
+const gradientTexture = textureloader.load('../src/public/textures/gradients/3.jpg');
 gradientTexture.magFilter = THREE.NearestFilter
 
 const material = new THREE.MeshToonMaterial({ 
@@ -88,7 +88,7 @@ scene.add( mesh1, mesh2, mesh3);
 
     /* gltf:BURGER */
     const BURtextureloader=new THREE.TextureLoader()
-    const BURTexture = BURtextureloader.load('./public/0810bakingwalpha.png');
+    const BURTexture = BURtextureloader.load('../src/public/0810bakingwalpha.png');
     BURTexture.flipY =false;
     BURTexture.colorSpace=THREE.SRGBColorSpace;
     // BURTexture.transparent=true;
@@ -98,7 +98,7 @@ scene.add( mesh1, mesh2, mesh3);
     BURMaterial.depthWrite=true;
     const gltfloader= new GLTFLoader();
 
-    gltfloader.load('./public/0810hamberger for three.glb',
+    gltfloader.load('../src/public/0810hamberger for three.glb',
     ( gltf ) => {
 
     let model = gltf.scene;
@@ -116,7 +116,7 @@ scene.add( mesh1, mesh2, mesh3);
 
     /* gltf:DONUT */
     const DONUTtextureloader=new THREE.TextureLoader()
-    const DONUTtexture = DONUTtextureloader.load('./public/donutUVbaking.png');
+    const DONUTtexture = DONUTtextureloader.load('../src/public/donutUVbaking.png');
     DONUTtexture.flipY =false; 
     DONUTtexture.colorSpace=THREE.SRGBColorSpace;
 
@@ -124,7 +124,7 @@ scene.add( mesh1, mesh2, mesh3);
     
 
     const gltfloader2= new GLTFLoader();
-    gltfloader2.load('./public/donut for three.glb',
+    gltfloader2.load('../src/public/donut for three.glb',
     ( gltf ) => {
 
         let model = gltf.scene;
@@ -149,7 +149,7 @@ scene.add( mesh1, mesh2, mesh3);
 
         /* gltf:JINJI */
         const JINJItextureloader=new THREE.TextureLoader()
-        const JINJItexture = JINJItextureloader.load('./public/candyUV.png');
+        const JINJItexture = JINJItextureloader.load('../src/public/candyUV.png');
         JINJItexture.flipY =true; 
         JINJItexture.colorSpace=THREE.SRGBColorSpace;
     
@@ -157,7 +157,7 @@ scene.add( mesh1, mesh2, mesh3);
         
     
         const gltfloader3= new GLTFLoader();
-        gltfloader2.load('./public/jinji for three.glb',
+        gltfloader2.load('../src/public/jinji for three.glb',
         ( gltf ) => {
     
             let model = gltf.scene;
