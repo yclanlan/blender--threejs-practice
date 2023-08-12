@@ -68,12 +68,18 @@ scene.add( mesh1, mesh2, mesh3);
     //to check loafing progress
     const loadingManager= new THREE.LoadingManager();
 
-    loadingManager.onStart =function  (url,item, total){
-        console.log('started loading: ${url}');
+    const progressBar=document.getElementById('progress-bar')
+
+    loadingManager.onProgress=function(url,loaded,total){
+        progressBar.value = (loaded/total)*100;
     }
+
+    
+    const progressBarContainer=document.querySelector('.progress-bar-container');
 
     loadingManager.onLoad =function (){
         console.log('Finished loading');
+        progressBarContainer.style.display="none";
     }
 
     
