@@ -110,6 +110,20 @@ a{
     color:white;
 }
 
+.made-by-three-js{
+    font-size: 0.5rem; 
+    color:white;
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+
+@media (min-width:768px) {
+ 
+    text-align: right;
+}
+
+}
+
 
 .progress-bar-container{
     position: absolute;
