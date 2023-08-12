@@ -40,8 +40,12 @@ html{
 
 /* section No.3 */
 .section.three{
+    height: 70vh;
+
+    @media (min-width:768px) {
+        height: 65vh;
+    }
     
-    height: 65vh;
 }
 
 
@@ -113,14 +117,9 @@ a{
 .made-by-three-js{
     font-size: 0.5rem; 
     color:white;
-    text-align: center;
+    text-align: right;
     padding-left: 2%;
     padding-right: 2%;
-
-@media (min-width:768px) {
- 
-    text-align: right;
-}
 
 }
 
