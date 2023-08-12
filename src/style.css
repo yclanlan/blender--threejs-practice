@@ -24,17 +24,37 @@ html{
 
 .section
 {
-    display: flex-block;
+    display: flex;
     flex-direction: column;
+    align-items: flex;
     justify-content:space-between;
-    align-items: center;
-    height: 105vh;
+    height: 100vh;
     position: relative;
     font-family: 'Cabin', sans-serif;
     color: #ffffff;
-    font-size: 7vmin;
+    
     padding-left: 10%;
     padding-right: 10%;
+    padding-bottom: 10%;
+}
+
+.section.three{
+    height: 65vh;
+}
+
+.top{
+    padding-top: 5%;
+}
+.bottom{
+    padding-bottom: 5%;
+}
+
+.top.two{
+    padding-top:30%;
+}
+
+.top.three{
+    padding-top:20%;
 }
 
 
@@ -58,27 +78,29 @@ section:nth-child(4)
     
 }
 
+
 h1{
-    font-size: 8vmin;
+    /* font-size: 8vmin; */
+    font-size: 4rem;
 }
 
 h3{
-    font-size: 4vmin;
+    font-size: 2rem;
     font-weight: 400;
 }
 
 h5{
-    font-size: 2vmin;
+    font-size: 1rem;
     font-weight: 350;
 }
 
 p{
-    font-size: 1.3vmin;
+    font-size: 0.8rem;
     font-weight: 300;
-    line-height: 2vmin;
+    /* line-height: 2rem; */
 }
 
 a{
-    font-size: 1.3vmin;
+    font-size: 0.8rem;
     color:white;
 }

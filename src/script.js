@@ -1,5 +1,4 @@
 import * as THREE from 'three'
-
 import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RectAreaLightHelper } from 'three/addons/helpers/RectAreaLightHelper.js';
@@ -7,18 +6,9 @@ import gsap from 'gsap';
 
 // console.log(gsap);
 
+
+
 THREE.ColorManagement.enabled = false
-
-const parameters = {
-    materialColor: '#ffeded'
-}
-
-// const gui = new GUI()
-
-// gui
-//     .addColor(parameters, 'materialColor')
-//     .onChange(()=>{ material.color.set(parameters.materialColor)}
-//     )
 
 
 /**
@@ -30,24 +20,13 @@ const canvas = document.querySelector('canvas.webgl')
 
 // Scene
 const scene = new THREE.Scene()
-//fog
+
+// Fog
 // scene.fog = new THREE.FogExp2( 0x64B4FD, 0.05 );
 
-/**
+/*
  * object
  */
-
-
-const textureloader= new THREE.TextureLoader();
-const gradientTexture = textureloader.load('../public/textures/gradients/3.jpg');
-gradientTexture.magFilter = THREE.NearestFilter
-
-const material = new THREE.MeshToonMaterial({ 
-    color: parameters.materialColor,
-    gradientMap: gradientTexture
-});
-
-
 
 // const gridHelper = new THREE.GridHelper( 10, 10 );
 // scene.add( gridHelper );
@@ -58,17 +37,17 @@ const objectsDistance = 5;
 
 const mesh1= new THREE.Mesh(
     new THREE.BoxGeometry(0,0,0),
-    material 
+     
 )
 
 const mesh2= new THREE.Mesh(
     new THREE.BoxGeometry(0,0,0),
-    material 
+    
 )
 
 const mesh3= new THREE.Mesh(
     new THREE.BoxGeometry(0,0,0),
-    material 
+    
 )
 
  mesh1.position.x = 2
@@ -86,8 +65,22 @@ const mesh3= new THREE.Mesh(
 scene.add( mesh1, mesh2, mesh3);
 
 
+    //to check loafing progress
+    const loadingManager= new THREE.LoadingManager();
+
+    loadingManager.onStart =function  (url,item, total){
+        console.log('started loading: ${url}');
+    }
+
+    loadingManager.onLoad =function (){
+        console.log('Finished loading');
+    }
+
+    
+
+    ///////////////////////////////////////////////////////////////
     /* gltf:BURGER */
-    const BURtextureloader=new THREE.TextureLoader()
+    const BURtextureloader=new THREE.TextureLoader(loadingManager)
     const BURTexture = BURtextureloader.load('0810bakingwalpha.png');
     BURTexture.flipY =false;
     BURTexture.colorSpace=THREE.SRGBColorSpace;
@@ -113,6 +106,7 @@ scene.add( mesh1, mesh2, mesh3);
     // console.log(model);
     mesh1.add(model)}); 
 
+    ///////////////////////////////////////////////////////////////
 
     /* gltf:DONUT */
     const DONUTtextureloader=new THREE.TextureLoader()
@@ -146,8 +140,9 @@ scene.add( mesh1, mesh2, mesh3);
     
     }); 
 
+    ///////////////////////////////////////////////////////////////
+    /* gltf:JINJI */
 
-        /* gltf:JINJI */
         const JINJItextureloader=new THREE.TextureLoader()
         const JINJItexture = JINJItextureloader.load('candyUV.png');
         JINJItexture.flipY =true; 
@@ -202,17 +197,21 @@ for(let i=0; i<particlesCount;i++){
 }
 
 
+
 const particlesGeometry=new THREE.BufferGeometry
 particlesGeometry.setAttribute('position',new THREE.BufferAttribute(position,3));
-
 const particlesMaterial = new THREE.PointsMaterial({
-    color: parameters.materialColor,
+    color: 0xffffff,
     sizeAttenuation: true,
     size:0.05
 })
 
 const particles = new THREE.Points(particlesGeometry,particlesMaterial);
 scene.add(particles);
+
+
+
+
 
 /**
  * Light
