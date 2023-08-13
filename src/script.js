@@ -36,18 +36,15 @@ const scene = new THREE.Scene()
 const objectsDistance = 5;
 
 const mesh1= new THREE.Mesh(
-    new THREE.BoxGeometry(0,0,0),
-     
+    new THREE.BoxGeometry(0,0,0),  
 )
 
 const mesh2= new THREE.Mesh(
-    new THREE.BoxGeometry(0,0,0),
-    
+    new THREE.BoxGeometry(0,0,0),  
 )
 
 const mesh3= new THREE.Mesh(
     new THREE.BoxGeometry(0,0,0),
-    
 )
 
  mesh1.position.x = 2
@@ -65,7 +62,7 @@ const mesh3= new THREE.Mesh(
 scene.add( mesh1, mesh2, mesh3);
 
 
-    //to check loafing progress
+    //to check loading progress
     const loadingManager= new THREE.LoadingManager();
 
     const progressBar=document.getElementById('progress-bar')
@@ -304,7 +301,7 @@ window.addEventListener('scroll',()=>{
     // console.log(scrollY);
 
     const newSection= Math.round(scrollY / sizes.height)
-    // console.log(newSection )
+    // console.log(newSection)
     
     if (newSection != currentSection){
         currentSection = newSection
@@ -356,11 +353,11 @@ const animate = () =>
 
     camera.position.y = -scrollY/ sizes.height * objectsDistance;
 
-    const parallaX = cursor.x
-    const parallaY = cursor.y
+    const movingX = cursor.x
+    const movingY = cursor.y
 
-    cameraGroup.position.x+= (parallaX-cameraGroup.position.x)*5 * deltaTime
-    cameraGroup.position.y+= (parallaY-cameraGroup.position.y)*5 * deltaTime
+    cameraGroup.position.x+= (movingX-cameraGroup.position.x)*5 * deltaTime
+    cameraGroup.position.y+= (movingY-cameraGroup.position.y)*5 * deltaTime
 
 
     // rotate mesh
