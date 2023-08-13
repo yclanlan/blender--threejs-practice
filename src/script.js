@@ -92,7 +92,7 @@ scene.add( mesh1, mesh2, mesh3);
     const BURMaterial=new THREE.MeshBasicMaterial({map:BURTexture})
     BURMaterial.transparent=true;
     BURMaterial.depthWrite=true;
-    const gltfloader= new GLTFLoader();
+    const gltfloader= new GLTFLoader(loadingManager);
 
     gltfloader.load('0810hamberger for three.glb',
     ( gltf ) => {
