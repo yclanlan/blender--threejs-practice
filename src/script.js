@@ -149,16 +149,8 @@ scene.add( mesh1, mesh2, mesh3);
     ///////////////////////////////////////////////////////////////
     /* gltf:JINJI */
 
-        const JINJItextureloader=new THREE.TextureLoader()
-        const JINJItexture = JINJItextureloader.load('candyUV.png');
-        JINJItexture.flipY =true; 
-        JINJItexture.colorSpace=THREE.SRGBColorSpace;
-    
-        const JINJIMaterial=new THREE.MeshBasicMaterial({map:JINJItexture})
-        
-    
         const gltfloader3= new GLTFLoader();
-        gltfloader2.load('jinji for three.glb',
+        gltfloader3.load('jinji for three.glb',
         ( gltf ) => {
     
             let model = gltf.scene;
