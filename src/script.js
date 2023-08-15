@@ -354,7 +354,7 @@ const animate = () =>
     camera.position.y = -scrollY/ sizes.height * objectsDistance;
 
     const movingX = cursor.x
-    const movingY = cursor.y
+    const movingY = -cursor.y
 
     cameraGroup.position.x+= (movingX-cameraGroup.position.x)*5 * deltaTime
     cameraGroup.position.y+= (movingY-cameraGroup.position.y)*5 * deltaTime
